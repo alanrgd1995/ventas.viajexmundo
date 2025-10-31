@@ -16,11 +16,13 @@ La base de datos utiliza SQLite y se crea automáticamente en `backend/data/viaj
 ## Puesta en marcha
 
 1. Crear y activar un entorno virtual de Python 3.11 o superior.
-2. Instalar dependencias:
+2. Instalar dependencias (desde la raíz del repositorio):
 
    ```bash
-   pip install -r backend/requirements.txt
+   pip install -r requirements.txt
    ```
+
+   > Si prefieres ejecutar el comando dentro del directorio `backend/`, utiliza `pip install -r requirements.txt` sin el prefijo `backend/`.
 
 3. Ejecutar la API:
 
