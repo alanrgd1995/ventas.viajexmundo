@@ -22,6 +22,8 @@ La base de datos utiliza SQLite y se crea automáticamente en `backend/data/viaj
    pip install -r requirements.txt
    ```
 
+   > En Google Colab, si no cambiaste manualmente a la carpeta del proyecto tras clonar el repositorio, usa la ruta completa: `pip install -r ventas.viajexmundo/requirements.txt`.
+   >
    > Si prefieres ejecutar el comando dentro del directorio `backend/`, utiliza `pip install -r requirements.txt` sin el prefijo `backend/`.
 
 3. Ejecutar la API:
