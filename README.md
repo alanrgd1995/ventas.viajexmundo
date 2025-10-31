@@ -26,10 +26,13 @@ La base de datos utiliza SQLite y se crea automáticamente en `backend/data/viaj
    >
    > ```python
    > %cd /content/ventas.viajexmundo
+   > !ls  # Deberías ver README.md, backend/, requirements.txt
    > %pip install -r requirements.txt
    > ```
    >
    > Si prefieres no cambiar de carpeta, pasa la ruta absoluta al archivo: `%pip install -r /content/ventas.viajexmundo/requirements.txt`.
+   >
+   > Si obtienes `Could not open requirements file`, confirma con `!ls /content` que la carpeta `ventas.viajexmundo` existe y que dentro está `requirements.txt`.
    >
    > Para instalar únicamente las dependencias del backend desde su carpeta, usa `pip install -r backend/requirements.txt`.
 
