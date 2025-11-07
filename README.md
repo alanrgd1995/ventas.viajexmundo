@@ -2,17 +2,61 @@
 
 Este es el repositorio del proyecto Ventas Viaje X Mundo, donde se gestionarán las ventas de viajes y servicios turísticos.
 
-## Instalación
+## Arquitectura actual
 
-Instrucciones sobre cómo instalar el proyecto.
+La primera iteración del sistema implementa un backend en **FastAPI + SQLModel** que permite:
 
-## Uso
+- Administrar agentes de la agencia.
+- Crear y editar vouchers de viaje con control de estado.
+- Registrar movimientos de ingresos y egresos asociados a cada voucher y agente.
+- Consultar un tablero financiero con totales de ingresos, egresos y saldo pendiente.
 
-Instrucciones sobre cómo utilizar el proyecto.
+La base de datos utiliza SQLite y se crea automáticamente en `backend/data/viajexmundo.db`.
 
-## Contribución
+## Puesta en marcha
 
-Instrucciones sobre cómo contribuir al proyecto.
+1. Crear y activar un entorno virtual de Python 3.11 o superior.
+2. Instalar dependencias (desde la raíz del repositorio):
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   > **En Google Colab:**
+   >
+   > ```python
+   > %cd /content/ventas.viajexmundo
+   > !ls  # Deberías ver README.md, backend/, requirements.txt
+   > %pip install -r requirements.txt
+   > ```
+   >
+   > Si prefieres no cambiar de carpeta, pasa la ruta absoluta al archivo: `%pip install -r /content/ventas.viajexmundo/requirements.txt`.
+   >
+   > Si obtienes `Could not open requirements file`, confirma con `!ls /content` que la carpeta `ventas.viajexmundo` existe y que dentro está `requirements.txt`.
+   >
+   > Para instalar únicamente las dependencias del backend desde su carpeta, usa `pip install -r backend/requirements.txt`.
+
+3. Ejecutar la API:
+
+   ```bash
+   uvicorn backend.app.main:app --reload
+   ```
+
+La documentación interactiva estará disponible en `http://127.0.0.1:8000/docs`.
+
+## Pruebas
+
+Para validar el flujo principal existe una prueba automatizada que puede ejecutarse con:
+
+```bash
+pytest backend/tests
+```
+
+## Próximos pasos sugeridos
+
+- Añadir autenticación de usuarios y control de permisos.
+- Construir el front-end web para los agentes internos.
+- Incorporar exportación de vouchers en PDF y reportes contables.
 
 ## Licencia
 
